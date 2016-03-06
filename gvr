@@ -5,7 +5,7 @@
 # TODO: gvr copy-attrs sourcejailname destjailname
 
 # load configuration from sofin.conf
-readonly CONF_NAME="sofin.conf.sh"
+readonly CONF_NAME="s.conf"
 readonly CONF_FILE="/etc/${CONF_NAME}"
 if [ -e "${CONF_FILE}" ]; then
     . "${CONF_FILE}"
@@ -462,7 +462,7 @@ ${JAIL_NAME} {
     ${SED_BIN} -i '' -e "s:__HOST_IP:${GVR_HOST_IP_ADDR}:" ${CELL}/etc/resolv.conf
 
     note "Installing Sofin to '${CELL}'."
-    ${CP_BIN} -v /etc/sofin.conf.sh ${CELL}/etc/
+    ${CP_BIN} -v /etc/s.conf ${CELL}/etc/
     ${CP_BIN} -v /usr/bin/s ${CELL}/usr/bin/s
 
     note "Updating sysctl.conf"

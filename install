@@ -219,7 +219,7 @@ else
 fi
 
 bin/install
-readonly CONF_NAME="sofin.conf.sh"
+readonly CONF_NAME="s.conf"
 readonly LOCAL_CONF_FILE="${SOFIN_REPO}/src/${CONF_NAME}"
 if [ -e "${LOCAL_CONF_FILE}" ]; then
     . "${LOCAL_CONF_FILE}"
